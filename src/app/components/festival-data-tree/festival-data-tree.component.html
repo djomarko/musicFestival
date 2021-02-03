@@ -1,0 +1,17 @@
+<div>
+  <ul class="record-labels">
+    <li *ngFor="let labels of recordLabels | sortByKey">
+      <label>{{ labels.name || '&nbsp;' }}</label>
+      <ul class="bands">
+        <li *ngFor="let bands of labels.bands | sortByKey">
+          <label>{{ bands.name }}</label>
+          <ul class="festivals">
+            <li *ngFor="let festivals of bands.festivals | sortByKey">
+              <label>{{ festivals.name }}</label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
